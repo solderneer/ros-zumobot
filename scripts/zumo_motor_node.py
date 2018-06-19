@@ -15,7 +15,7 @@ def motorHandler(data):
 
 def main():
     rospy.init_node('zumo_motor_node', anonymous = False)
-    rospy.Subscriber('zumo_motor_rl', motor, motorHandler)
+    rospy.Subscriber('zumo_motors', motor, motorHandler)
     zumo.init()
 
     rospy.spin()
@@ -24,4 +24,6 @@ if __name__ == '__main__':
     try:
         main()
     except rospy.ROSInterruptException:
+        # Used for shutdown safely
+        zumo.deinit()
         pass

@@ -42,6 +42,9 @@ def setMotors(rmotor, lmotor, rdir, ldir):
     else:
         return False
 
+def deinit():
+    ser.close()
+
 def selftest():
     init(9600, '/dev/ttyMFD1')
 
@@ -51,5 +54,9 @@ def selftest():
         zumo.setMotors(50,50,False, True)
 
 if __name__ = "__main__":
-    selftest()
+    try:
+        selftest()
+    except KeyboardInterrupt:
+        zumo.deinit() # Safe exit after closing serial port
+
 
