@@ -14,11 +14,7 @@ def init(baudrate, port):
     ser.port = port
 
     ser.open()
-
-    if ser.is_open:
-        return True
-    else:
-        return False
+    return True
 
 # Takes a value between 0 and 200 and maps it to each of the motors
 def setMotors(rmotor, lmotor, rdir, ldir):
@@ -53,7 +49,7 @@ def selftest():
         time.sleep(1)
         zumo.setMotors(50,50,False, True)
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     try:
         selftest()
     except KeyboardInterrupt:

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>ros-zumobot</name>
+  <name>zumoros</name>
   <version>0.0.0</version>
   <description>The ros package to enable zumobot control</description>
   

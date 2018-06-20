@@ -3,9 +3,7 @@
 # Simple motor instruction handler
 import rospy
 import zumo
-from ros_zumobot.msg import motor
-
-ser = serial.Serial() # Global serial handle
+from zumoros.msg import motor
 
 def motorHandler(data):
     zumo.setMotors(rmotor = data.rmotor, 
@@ -16,7 +14,7 @@ def motorHandler(data):
 def main():
     rospy.init_node('zumo_motor_node', anonymous = False)
     rospy.Subscriber('zumo_motors', motor, motorHandler)
-    zumo.init()
+    zumo.init(9600, '/dev/ttyUSB0')
 
     rospy.spin()
 
