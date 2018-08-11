@@ -1,2 +1,2 @@
-# ros-zumobot-board
-A PCB that connects the Intel Edison board to the ZumoBot
+# zumoros_server
+A group of ROS scripts that allow communication and control of the zumobot. Documentation is a WIP.
