@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>zumoros</name>
+  <name>zumoros_server</name>
   <version>0.0.0</version>
-  <description>The ros package to enable zumobot control</description>
+  <description>A group of ROS scripts that allow communication and control of the zumobot</description>
   
   <maintainer email="sudhar393@gmail.com">ros</maintainer>
 
